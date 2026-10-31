@@ -1,4 +1,5 @@
 // Edita aquí los datos de cada sede.
+// Si una sede aún no tiene enlace (url vacía), se muestra como "pendiente" sin botón.
 // Tip: el enlace "https://search.google.com/local/writereview?placeid=TU_PLACE_ID"
 // abre directamente la ventana para escribir la reseña.
 export const SEDES = [
@@ -8,8 +9,8 @@ export const SEDES = [
     url: "https://maps.app.goo.gl/FJ4ds5bfzpAjy3338"
   },
   {
-    nombre: "Sede 2",
-    direccion: "Dirección de la sede 2",
-    url: "https://maps.app.goo.gl/REEMPLAZAR_SEDE_2"
+    nombre: "Segunda sede",
+    direccion: "Muy pronto podrás reseñarla aquí.",
+    url: ""
   }
 ];

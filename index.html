@@ -8,13 +8,15 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/logo-uchuya.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/logo-uchuya.png">
+
   <link rel="preload" href="assets/logo-uchuya.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Fuentes sin bloquear el render: la página se muestra al instante con la fuente del sistema -->
+  <!-- Fuente de texto sin bloquear el render: la página se muestra al instante con la fuente del sistema -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
 
   <link rel="modulepreload" href="js/sedes.js">
   <script type="module" src="js/main.js"></script>
@@ -22,15 +24,24 @@
 <body>
   <main>
     <header>
-      <picture>
+      <picture class="logo">
         <source srcset="assets/logo-uchuya.webp" type="image/webp">
-        <img class="logo" src="assets/logo-uchuya.png" alt="Logo de Clínica Dental Uchuya Premium de Meilyng" width="192" height="192" fetchpriority="high" decoding="async">
+        <img src="assets/logo-uchuya.png" alt="Logo de Clínica Dental Uchuya Premium de Meilyng" width="192" height="192" fetchpriority="high" decoding="async">
       </picture>
       <span class="brand">Clínica Dental Uchuya Premium de Meilyng</span>
-      <h1>Tu sonrisa, <em>tu opinión</em></h1>
-      <p class="lead">Gracias por confiar en nosotros. Elige la sede donde te atendimos y cuéntanos tu experiencia en Google.</p>
+      <h1>
+        Gracias por tu <em>sonrisa</em>
+        <span class="motto">Tu sonrisa, tu opinión</span>
+      </h1>
+      <p class="lead">Tu confianza nos importa. Elige la sede donde te atendimos y cuéntanos tu experiencia en Google.</p>
       <div class="stars" aria-hidden="true">★★★★★</div>
     </header>
+
+    <ol class="steps">
+      <li><span>1</span>Elige tu sede</li>
+      <li><span>2</span>Toca las estrellas</li>
+      <li><span>3</span>Escribe tu reseña</li>
+    </ol>
 
     <section class="grid" id="sedes" aria-label="Sedes"></section>
 
@@ -51,6 +62,13 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </span>
     </a>
+  </template>
+
+  <template id="sede-pendiente-template">
+    <div class="card is-pending">
+      <h2 class="card-title"></h2>
+      <p class="card-address"></p>
+    </div>
   </template>
 </body>
 </html>
