@@ -1,4 +1,4 @@
-import { SEDES } from "./sedes.js";
+import { SEDES } from "./sedes.js?v=2";
 
 const grid = document.getElementById("sedes");
 const plantilla = document.getElementById("sede-template");
